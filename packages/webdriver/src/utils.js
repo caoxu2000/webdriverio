@@ -212,6 +212,7 @@ export function isW3C (capabilities) {
  */
 export function isChrome (caps) {
     return (
+        Boolean(caps.browserName && caps.browserName.toLowerCase() === 'chrome') ||
         Boolean(caps.chrome) ||
         Boolean(caps['goog:chromeOptions'])
     )
